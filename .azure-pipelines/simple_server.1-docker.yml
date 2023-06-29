@@ -39,8 +39,8 @@ jobs:
   # These jobs run in parallel (https://docs.microsoft.com/en-us/azure/devops/pipelines/process/phases?tabs=yaml&view=azure-devops#multi-configuration)
   strategy:
     matrix:
-      python36:
-        pythonVersion: 3.6
+      python38:
+        pythonVersion: 3.8
       python37:
         pythonVersion: 3.7
 

@@ -36,8 +36,8 @@ jobs:
   # Strategy pattern to run all steps for multiple versions of Python
   strategy:
     matrix:
-      python36:
-        pythonVersion: 3.6
+      python38:
+        pythonVersion: 3.8
       python37:
         pythonVersion: 3.7
 
