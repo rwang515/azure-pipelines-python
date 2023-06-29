@@ -41,10 +41,10 @@ jobs:
       python37:
         pythonVersion: 3.7
 
-  # Run on a Microsoft-hosted agent running Ubuntu-16.04
+  # Run on a Microsoft-hosted agent running ubuntu-latest
   # https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops
   pool:
-    vmImage: ubuntu-16.04
+    vmImage: ubuntu-latest
 
 # Steps are the specific tasks that execute code and do things
   steps:
@@ -90,10 +90,10 @@ jobs:
 # we will download one of the already-validated build assets and publish it to an Azure Artifacts feed
 - job: Publish
 
-  # Run on a Microsoft-hosted agent running Ubuntu-16.04
+  # Run on a Microsoft-hosted agent running ubuntu-latest
   # https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops
   pool:
-    vmImage: ubuntu-16.04
+    vmImage: ubuntu-latest
 
   # We want to wait for all Build Jobs to complete before running the Publish Job
   dependsOn: Build
