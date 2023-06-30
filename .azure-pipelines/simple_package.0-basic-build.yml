@@ -68,3 +68,17 @@ steps:
   inputs:
     artifactName: dist
     targetPath: $(srcDirectory)/dist
+
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloud'
+    organization: 'otipraeo'
+    scannerMode: 'CLI'
+    configMode: 'file'
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
